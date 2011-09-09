@@ -6,9 +6,10 @@ Gem::Specification.new do |s|
   s.version     = "0.0.1"
   
   s.authors     = ["Rudolf Schmidt"]
-  s.homepage    = ""
+  s.homepage    = "http://github.com/rudionrails/capistrano-ext-copy-with-bundler"
+  
   s.summary     = %q{Capistrano recipe to deploy via :copy with already bundled gems}
-  s.description = %q{Capistrano recipe to deploy via :copy with already bundled gems}
+  s.description = %q{Not every server allows access to rubygems or other repository sources, we I needed a way to get the gems pre-bundled}
 
   s.rubyforge_project = "capistrano-ext-copy-with-bundler"
 
