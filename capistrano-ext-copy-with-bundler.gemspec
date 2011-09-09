@@ -1,15 +1,14 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "capistrano-ext-copy-with-bundler/version"
 
 Gem::Specification.new do |s|
   s.name        = "capistrano-ext-copy-with-bundler"
-  s.version     = Capistrano::Ext::Copy::With::Bundler::VERSION
+  s.version     = "0.0.1"
+  
   s.authors     = ["Rudolf Schmidt"]
-  s.email       = ["me@rudionrails.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Capistrano recipe to deploy via :copy with already bundled gems}
+  s.description = %q{Capistrano recipe to deploy via :copy with already bundled gems}
 
   s.rubyforge_project = "capistrano-ext-copy-with-bundler"
 
@@ -20,5 +19,5 @@ Gem::Specification.new do |s|
 
   # specify any dependencies here; for example:
   # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
+  s.add_runtime_dependency "capistrano", "~> 2.8"
 end
