@@ -1,3 +1,5 @@
+require 'capistrano'
+
 module Capistrano
   module Deploy
     module Strategy
