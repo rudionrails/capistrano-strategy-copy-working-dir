@@ -4,16 +4,16 @@ $:.push File.expand_path("../lib", __FILE__)
 Gem::Specification.new do |s|
   s.autorequire = false
   
-  s.name        = "capistrano-ext-copy-with-bundler"
+  s.name        = "capistrano-strategy-copy-working-dir"
   s.version     = "0.0.1"
   
   s.authors     = ["Rudolf Schmidt"]
-  s.homepage    = "http://github.com/rudionrails/capistrano-ext-copy-with-bundler"
+  s.homepage    = "http://github.com/rudionrails/capistrano-strategy-copy-working-dir"
   
-  s.summary     = %q{Capistrano recipe to deploy via :copy with already bundled gems}
-  s.description = %q{Not every server allows access to rubygems or other repository sources, we I needed a way to get the gems pre-bundled}
+  s.summary     = %q{Capistrano recipe to deploy via :copy from the current working directory}
+  s.description = %q{Not every server allows access to rubygems or other repository sources, so this is just to make life a little easier}
 
-  s.rubyforge_project = "capistrano-ext-copy-with-bundler"
+  s.rubyforge_project = "capistrano-strategy-copy-working-dir"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
