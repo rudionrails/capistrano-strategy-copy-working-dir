@@ -2,6 +2,8 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
+  s.autorequire = false
+  
   s.name        = "capistrano-ext-copy-with-bundler"
   s.version     = "0.0.1"
   
@@ -16,7 +18,7 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  s.require_paths = ["lib"]
+  #s.require_paths = ["lib"]
 
   # specify any dependencies here; for example:
   # s.add_development_dependency "rspec"
