@@ -91,10 +91,10 @@ module Capistrano
         def bundle!
           logger.trace "running bundler in #{destination}..."
           
-          bundle_cmd     = configuration[:bundle_cmd] || "bundle"
-          bundle_flags   = configuration[:bundle_flags] || "--deployment --quiet"
-          bundle_dir     = configuration[:bundle_dir] || File.join('vendor', 'bundle')
-          bundle_gemfile = configuration[:bundle_gemfile] || "Gemfile"
+          bundle_cmd     = configuration[:bundle_cmd]         || "bundle"
+          bundle_flags   = configuration[:bundle_flags]       || "--deployment --quiet"
+          bundle_dir     = configuration[:bundle_dir]         || File.join(destination, 'vendor', 'bundle')
+          bundle_gemfile = configuration[:bundle_gemfile]     || "Gemfile"
           bundle_without = [ *(configuration[:bundle_without] || [:development, :test]) ].compact
 
           args = ["--gemfile #{File.join(destination, bundle_gemfile)}"]
@@ -102,9 +102,9 @@ module Capistrano
           args << bundle_flags.to_s
           args << "--without #{bundle_without.join(" ")}" unless bundle_without.empty?
 
-          Dir.chdir( destination ) do
-            system( "#{bundle_cmd} install #{args.join(' ')}" )
-          end
+          #Dir.chdir( destination ) do
+            system( "cd #{destination} && #{bundle_cmd} install #{args.join(' ')}" )
+          #end
         end
         
       end
