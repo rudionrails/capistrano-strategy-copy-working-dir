@@ -1,4 +1,4 @@
-require 'capistrano'
+require 'capistrano/recipes/deploy/strategy/copy'
 
 module Capistrano
   module Deploy
