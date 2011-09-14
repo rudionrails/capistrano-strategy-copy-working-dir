@@ -97,8 +97,8 @@ module Capistrano
           bundle_gemfile = configuration[:bundle_gemfile]     || "Gemfile"
           bundle_without = [ *(configuration[:bundle_without] || [:development, :test]) ].compact
 
-          args = ["--gemfile #{File.join(destination, bundle_gemfile)}"]
-          args << "--path #{bundle_dir}" unless bundle_dir.to_s.empty?
+          args = ["--gemfile=#{File.join(destination, bundle_gemfile)}"]
+          args << "--path=#{bundle_dir}" unless bundle_dir.to_s.empty?
           args << bundle_flags.to_s
           args << "--without #{bundle_without.join(" ")}" unless bundle_without.empty?
 
