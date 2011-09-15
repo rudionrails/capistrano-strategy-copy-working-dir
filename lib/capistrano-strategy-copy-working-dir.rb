@@ -1,1 +1,4 @@
-require File.dirname(__FILE__) + '/capistrano/recipes/deploy/strategy/copy_working_dir'
+module CapistranoStrategyCopyWorkingDir
+  VERSION = '0.1.0'
+  
+end
